@@ -75,6 +75,9 @@ def loop():
 			time.sleep(0.1)
 
 def destroy():
+	send16bitData(CmdMode)
+	sendLED(0x0000)
+	latchData()
 	GPIO.cleanup()
 
 if __name__ == '__main__':
